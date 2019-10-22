@@ -18,6 +18,11 @@ public class StudentRecordTester
         students[0]=new StudentRecord(a);
         students[1]=new StudentRecord(b);
         students[2]=new StudentRecord(c);
+        
+        students[0].average(1,3);
+        students[1].average(0,2);
+        students[2].average(2,3);
+        
     }
     
 }
