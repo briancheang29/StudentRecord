@@ -28,7 +28,12 @@ public class StudentRecord
     */
    private boolean hasImproved()
    {
-      return false; //here so the class compiles
+       boolean isIncreasing=true;
+       for(int i=scores.length-1; i>=1; i--)
+       if(scores[i-1]>scores[i])
+       isIncreasing=false;
+       
+       return false; //here so the class compiles
    }  
    
    /** if the values in scores have imrpoved, returns the average of
@@ -38,6 +43,11 @@ public class StudentRecord
     */
    public double finalAverage()
    {
-      return 0; //here so the class compiles
+       for(int i =0; i<=scores.length; i++)
+       {
+           sum+=scores[i];
+           sum/= (scores.length);
+       }
+       return 0; //here so the class compiles
    } 
 }
